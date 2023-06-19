@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.mcuhq.simplebluetooth.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="랜덤 뽑기"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textSize="40dp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Status:"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bluetooth_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:text="&lt;Bluetooth Status>" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CD5C5C"
+        android:text="Bluetooth ON" />
+
+    <Button
+        android:id="@+id/off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#BC8F8F"
+        android:text="Bluetooth OFF" />
+
+    <Button
+        android:id="@+id/paired_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F08080"
+        android:text="Show paired Devices" />
+
+    <Button
+        android:id="@+id/discover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FA8072"
+        android:text="Discover New Devices" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/number_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="       원하는 최대 수를 입력하시오       "
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전송"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:backgroundTint="#E9967A"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="나와라 랜덤수!"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="25dp" />
+
+    <ListView
+        android:id="@+id/devices_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice" />
+</LinearLayout>
