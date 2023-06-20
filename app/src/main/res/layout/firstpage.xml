@@ -5,41 +5,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#ffffff"
+    android:background = "@mipmap/title"
     tools:context="com.mcuhq.simplebluetooth.firstpage">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="GAME"
-        android:textColor="#FF6347"
-        android:textSize="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="202316708 육현희"
         android:textSize="15dp"
+        android:layout_marginTop="400dp"
         android:textColor="#000000"
-        android:layout_marginLeft="250dp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="187dp"
-        android:layout_height="177dp"
-        android:layout_marginTop="150dp"
-        android:layout_gravity="center"
-        app:srcCompat="@mipmap/dice" />
+        android:layout_marginLeft="200dp" />
 
     <Button
         android:id="@+id/start_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="#B0E0E6"
-        android:text="스타뚜"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="250dp"
+        android:backgroundTint="#ffffff"
+        android:text="START"
         android:textSize="20dp" />
 
 </LinearLayout>
