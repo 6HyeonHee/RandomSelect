@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     // GUI Components
     private TextView mBluetoothStatus;
-    private TextView mTemperature;
+    private TextView mResult;
     private EditText mNumberInput;
     private Button mSendBtn;
     private Button mScanBtn;
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         mOffBtn = (Button)findViewById(R.id.off);
         mDiscoverBtn = (Button)findViewById(R.id.discover);
         mListPairedDevicesBtn = (Button)findViewById(R.id.paired_btn);
-        mTemperature = (TextView)findViewById(R.id.temperature);
+        mResult = (TextView)findViewById(R.id.result);
         mNumberInput = (EditText) findViewById(R.id.number_input);
         mSendBtn = (Button) findViewById(R.id.send_button);
 
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 if(msg.what == MESSAGE_READ){
                     String readMessage = null;
                     readMessage = new String((byte[]) msg.obj, StandardCharsets.UTF_8);
-                    mTemperature.setText(readMessage); // 랜덤한 숫자를 mTemperature에 출력
+                    mResult.setText(readMessage); // 랜덤한 숫자를 mTemperature에 출력
                 } else if(msg.what == CONNECTING_STATUS){
                     char[] sConnected;
                     if(msg.arg1 == 1)
